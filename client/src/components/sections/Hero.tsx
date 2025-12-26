@@ -1,14 +1,17 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown, Terminal } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBg from "@assets/generated_images/abstract_dark_modern_technology_background_with_blue_and_purple_glowing_particles.png";
-import profileImg from "@assets/faf3ad33-ba9c-48b9-95f9-b4a42c79c0a6_763x763_1766506648573.jpg";
+// import heroBg from "@assets/generated_images/abstract_dark_modern_technology_background_with_blue_and_purple_glowing_particles.png";
+// import profileImg from "@assets/faf3ad33-ba9c-48b9-95f9-b4a42c79c0a6_763x763_1766506648573.jpg";
+
+const heroBg = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop";
+const profileImg = "/profile.jpg";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Overlay */}
-      <div 
+      <div
         className="absolute inset-0 z-0 opacity-40"
         style={{
           backgroundImage: `url(${heroBg})`,
@@ -33,12 +36,12 @@ export default function Hero() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
-            Building, uhm, <br />
+            Building, <br />
             <span className="text-gradient">just cool stuff</span>
           </h1>
-          
+
           <p className="text-xl text-muted-foreground mb-4 max-w-lg leading-relaxed">
-            I'm <span className="text-white font-semibold">JD Conradie</span> (aka "Nimble Slug"), a Data Engineer, wannabe Cloud Engineer, and aspiring Product Owner specialized in building scalable data architectures and modern web experiences.
+            I'm <span className="text-white font-semibold">JD Conradie</span> (aka "Nimble Slug"), a Data Engineer, wannabe Cloud Engineer, and aspiring Product Owner specialized in building scalable data architectures, data platforms and random modern web experiences.
           </p>
 
           <div className="flex flex-wrap gap-4 mt-8">
@@ -59,14 +62,14 @@ export default function Hero() {
         >
           <div className="relative w-[500px] h-[500px] mx-auto">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full blur-[100px] opacity-20 animate-pulse" />
-            <img 
-              src={profileImg} 
-              alt="JD Conradie" 
+            <img
+              src={profileImg}
+              alt="JD Conradie"
               className="relative z-10 w-full h-full object-cover rounded-3xl shadow-2xl border border-white/10 rotate-3 hover:rotate-0 transition-transform duration-500"
             />
-            
+
             {/* Floating Badge */}
-            <motion.div 
+            <motion.div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
@@ -77,14 +80,14 @@ export default function Hero() {
               </div>
               <div>
                 <p className="text-xs text-muted-foreground">Experience</p>
-                <p className="font-bold text-lg">10+ Years</p>
+                <p className="font-bold text-lg">7+ Years</p>
               </div>
             </motion.div>
           </div>
         </motion.div>
       </div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}

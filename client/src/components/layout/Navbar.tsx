@@ -39,12 +39,10 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/">
-          <a className="flex items-center gap-2 text-2xl font-bold tracking-tighter hover:opacity-80 transition-opacity">
+        <Link href="/" className="flex items-center gap-2 text-2xl font-bold tracking-tighter hover:opacity-80 transition-opacity">
             <Code2 className="h-8 w-8 text-primary" />
             <span className="hidden sm:inline">JD <span className="text-primary">Conradie</span></span>
             <span className="sm:hidden">JD<span className="text-primary">C</span></span>
-          </a>
         </Link>
 
         {/* Desktop Nav */}
@@ -96,9 +94,9 @@ export default function Navbar() {
                 </button>
               ))}
               <div className="flex gap-4 mt-4 pt-4 border-t border-white/10">
-                <a href="#" className="text-muted-foreground hover:text-primary"><Github /></a>
-                <a href="#" className="text-muted-foreground hover:text-primary"><Linkedin /></a>
-                <a href="#" className="text-muted-foreground hover:text-primary"><Mail /></a>
+                <a href="https://github.com/jdc891010" className="text-muted-foreground hover:text-primary"><Github /></a>
+                <a href="https://www.linkedin.com/in/jd-conradie/" className="text-muted-foreground hover:text-primary"><Linkedin /></a>
+                <a href="mailto:jdconradie@gmail.com" className="text-muted-foreground hover:text-primary"><Mail /></a>
               </div>
             </div>
           </motion.div>
