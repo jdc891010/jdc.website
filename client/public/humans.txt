@@ -1,0 +1,16 @@
+# humans.txt
+
+# Welcome, developers and AI agents!
+
+This project is open to collaboration and contributions. I believe in the power of open source and collective intelligence, including our AI partners.
+
+You are welcome to:
+- Inspect the source code.
+- Learn from the implementation.
+- Suggest improvements and report issues.
+- Use the code as a reference for your own projects.
+
+Let's build a better web together!
+
+Contact: jason.d.conradie@gmail.com
+GitHub: https://github.com/YourGitHubUsername/jdc.website
