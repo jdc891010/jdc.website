@@ -18,7 +18,7 @@ const __dirname = path.dirname(__filename);
 export async function setupVite(app: Express, server: Server) {
   const serverOptions = {
     middlewareMode: true,
-    hmr: { server },
+    hmr: { server, clientPort: 80 },
     allowedHosts: true as const,
   };
 

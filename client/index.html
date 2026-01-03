@@ -24,6 +24,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Inter for Body, JetBrains Mono for Code -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet">
+    <script>
+      window.addEventListener('error', function(event) {
+        console.error("Global error:", event.error);
+        const root = document.getElementById("root");
+        if (root && root.innerHTML === "") {
+          const errorDiv = document.createElement("div");
+          errorDiv.style.cssText = "position: fixed; top: 0; left: 0; width: 100%; background: #fee; color: red; padding: 20px; z-index: 9999;";
+          errorDiv.textContent = "Application Error: " + (event.message || "Unknown error check console");
+          document.body.appendChild(errorDiv);
+        }
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>
