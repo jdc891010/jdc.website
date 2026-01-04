@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Twitter, Heart, ArrowRight } from "lucide-react";
+import { Github, Linkedin, Mail, Heart, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Footer() {
@@ -14,10 +14,22 @@ export default function Footer() {
             <p className="text-muted-foreground">Let's turn your ideas into reality.</p>
           </div>
           <div className="flex gap-4">
-            <Button size="lg" className="rounded-full bg-white text-black hover:bg-white/90 font-bold">
+            <Button 
+              size="lg" 
+              className="rounded-full bg-white text-black hover:bg-white/90 font-bold"
+              onClick={() => window.location.href = "mailto:jdconradie8910@gmail.com"}
+            >
               Hire Me Now
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full border-white/20 hover:bg-white/10">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="rounded-full border-white/20 hover:bg-white/10"
+              onClick={() => {
+                const el = document.querySelector("#projects") || document.querySelector("#resume");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               View Services
             </Button>
           </div>
@@ -33,10 +45,9 @@ export default function Footer() {
                 aka "Nimble Slug". Building scalable solutions and digital experiences with modern technologies. Always learning, always shipping.
               </p>
               <div className="flex gap-3">
-                <a href="#" className="bg-white/5 p-2 rounded-full hover:bg-primary hover:text-white transition-all"><Github size={18} /></a>
-                <a href="#" className="bg-white/5 p-2 rounded-full hover:bg-primary hover:text-white transition-all"><Linkedin size={18} /></a>
-                <a href="#" className="bg-white/5 p-2 rounded-full hover:bg-primary hover:text-white transition-all"><Twitter size={18} /></a>
-                <a href="#" className="bg-white/5 p-2 rounded-full hover:bg-primary hover:text-white transition-all"><Mail size={18} /></a>
+                <a href="https://github.com/jdc891010" target="_blank" rel="noopener noreferrer" className="bg-white/5 p-2 rounded-full hover:bg-primary hover:text-white transition-all"><Github size={18} /></a>
+                <a href="https://www.linkedin.com/in/jd-conradie/" target="_blank" rel="noopener noreferrer" className="bg-white/5 p-2 rounded-full hover:bg-primary hover:text-white transition-all"><Linkedin size={18} /></a>
+                <a href="mailto:jdconradie8910@gmail.com" className="bg-white/5 p-2 rounded-full hover:bg-primary hover:text-white transition-all"><Mail size={18} /></a>
               </div>
             </div>
             
@@ -50,14 +61,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div>
-              <h4 className="font-semibold mb-4 text-white">Recent Posts</h4>
-              <ul className="space-y-2 text-muted-foreground text-sm">
-                <li><a href="#" className="hover:text-primary transition-colors truncate block">The Future of Serverless</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors truncate block">Why I Switched to Zustand</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors truncate block">Mastering TypeScript</a></li>
-              </ul>
-            </div>
+            {/* Removed Recent Posts */}
           </div>
 
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">

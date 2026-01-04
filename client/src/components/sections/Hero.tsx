@@ -45,10 +45,36 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-4 mt-8">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 h-12 text-base">
-              View Projects <ArrowRight className="ml-2 h-4 w-4" />
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 h-12 text-base"
+              onClick={() => {
+                const el = document.querySelector("#projects");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Featured Work <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white/20 hover:bg-white/10 text-white rounded-full px-8 h-12 text-base">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white/20 hover:bg-white/10 text-white rounded-full px-8 h-12 text-base"
+              onClick={() => {
+                const el = document.querySelector("#pet-projects");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Pet Projects
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white/20 hover:bg-white/10 text-white rounded-full px-8 h-12 text-base"
+              onClick={() => {
+                const el = document.querySelector("#contact");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               Contact Me
             </Button>
           </div>

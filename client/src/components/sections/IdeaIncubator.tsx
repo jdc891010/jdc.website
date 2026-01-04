@@ -25,7 +25,7 @@ const incubatorProjects = [
     description: "An e-commerce solution for specialty coffee roasters. Includes subscription management, inventory tracking, and seamless payment integration with Stripe.",
     tags: ["React", "Node.js", "Stripe", "PostgreSQL"],
     links: { demo: "#", github: "#" },
-    status: "Launching Soon",
+    status: "Prototype Ready",
     color: "bg-orange-500/10 text-orange-500 border-orange-500/20"
   }
 ];
@@ -109,13 +109,28 @@ export default function IdeaIncubator() {
                   </div>
                   
                   <div className="flex flex-wrap gap-3">
-                     <Button variant="outline" size="sm" className="gap-2 border-white/10 hover:bg-white/5">
+                     <Button 
+                       variant="outline" 
+                       size="sm" 
+                       className="gap-2 border-white/10 hover:bg-white/5"
+                       onClick={() => window.open(project.links.github, "_blank")}
+                     >
                         <Github size={16} /> Source Code
                      </Button>
-                     <Button variant="outline" size="sm" className="gap-2 border-white/10 hover:bg-white/5">
+                     <Button 
+                       variant="outline" 
+                       size="sm" 
+                       className="gap-2 border-white/10 hover:bg-white/5"
+                       onClick={() => window.open(project.links.demo, "_blank")}
+                     >
                         <FileText size={16} /> View Deck
                      </Button>
-                     <Button variant="default" size="sm" className="gap-2 bg-primary/20 text-primary hover:bg-primary/30 border-primary/20">
+                     <Button 
+                       variant="default" 
+                       size="sm" 
+                       className="gap-2 bg-primary/20 text-primary hover:bg-primary/30 border-primary/20"
+                       onClick={() => window.open(project.links.demo, "_blank")}
+                     >
                         <ExternalLink size={16} /> Live Demo
                      </Button>
                   </div>
@@ -136,9 +151,20 @@ export default function IdeaIncubator() {
            <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-lg">
              I'm looking for partners or investors to help productionize these concepts. I'm happy to stay on as a <span className="text-white font-bold">Technical Product Owner</span> or <span className="text-white font-bold">Advisor</span>.
            </p>
-           <Button size="lg" className="rounded-full font-bold">
-             Let's Discuss Opportunities
-           </Button>
+          <Button 
+            size="lg" 
+            className="rounded-full font-bold"
+            onClick={() => {
+              const contactEl = document.querySelector("#contact");
+              if (contactEl) {
+                contactEl.scrollIntoView({ behavior: "smooth" });
+              } else {
+                window.location.href = "mailto:jdconradie8910@gmail.com";
+              }
+            }}
+          >
+            Let's Discuss Opportunities
+          </Button>
         </motion.div>
       </div>
     </section>

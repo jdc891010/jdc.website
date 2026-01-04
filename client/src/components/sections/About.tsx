@@ -35,7 +35,7 @@ export default function About() {
                 🔥 Hot Take
               </h4>
               <p className="italic text-muted-foreground">
-                "Premature optimization is the root of all evil, but clean code is the foundation of all sanity."
+                "The strongest engineers practice T-shaped communication: go deep when needed, but constantly bridge across teams, ask the hard questions, and avoid getting distracted by shiny tools that don't serve outcomes."
               </p>
             </div>
           </motion.div>

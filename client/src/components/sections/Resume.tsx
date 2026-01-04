@@ -27,7 +27,7 @@ const experience = [
   },
   {
     company: "Stellenbosch University",
-    role: "MSc - Kinesiology & Exercise Science",
+    role: "MSc - Exercise Science",
     period: "2012 - 2014",
     description: "Background in Exercise Science and Biochemistry providing a unique perspective in health-tech. Focused on physiological sciences and data analysis.",
     type: "education"

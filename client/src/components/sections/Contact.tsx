@@ -57,7 +57,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-bold text-lg">Email Me</h4>
-                  <a href="mailto:hello@alex.dev" className="text-muted-foreground hover:text-white transition-colors">hello@nimble-slug.dev</a>
+                  <a href="mailto:jdconradie8910@gmail.com" className="text-muted-foreground hover:text-white transition-colors">jdconradie8910@gmail.com</a>
                 </div>
               </div>
               
@@ -77,9 +77,14 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-bold text-lg">Coffee Chat</h4>
-                  <p className="text-muted-foreground mb-2">Book a 15-min intro call</p>
+                  <p className="text-muted-foreground mb-2">Book a 30-min intro call</p>
                   <div className="flex gap-3">
-                    <Button variant="outline" size="sm" className="rounded-full border-accent text-accent hover:bg-accent hover:text-white">
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="rounded-full border-accent text-accent hover:bg-accent hover:text-white"
+                      onClick={() => window.open("https://calendar.app.google/f634hSRwTSzum3Li9", "_blank")}
+                    >
                       Schedule Now
                     </Button>
                   
@@ -180,6 +185,29 @@ export default function Contact() {
               </form>
             </Form>
           </motion.div>
+        </div>
+      </div>
+      <div className="container mx-auto px-6 mt-12">
+        <div className="glass-panel p-6 rounded-2xl">
+          <h3 className="text-xl font-bold mb-4">Book a Meeting</h3>
+          <p className="text-muted-foreground mb-4">Use the booking link below to schedule time directly.</p>
+          <div className="w-full aspect-video bg-white rounded-lg overflow-hidden border border-white/10">
+            <iframe 
+              src="https://calendar.app.google/f634hSRwTSzum3Li9" 
+              className="w-full h-full bg-white" 
+              title="JD Booking"
+            ></iframe>
+          </div>
+          <div className="mt-4">
+            <a 
+              href="https://calendar.app.google/f634hSRwTSzum3Li9" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-primary hover:underline"
+            >
+              Open booking page
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -3,20 +3,30 @@ import { Badge } from "@/components/ui/badge";
 
 const skillCategories = [
   {
-    title: "Frontend",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Redux", "GraphQL"],
-  },
-  {
     title: "Backend",
-    skills: ["Node.js", "Express", "Python", "Django", "PostgreSQL", "Redis", "Go"],
+    skills: ["Python", "PostgreSQL", "SQL", "DuckDB", "Go (Entry Level)"],
   },
   {
     title: "Cloud & DevOps",
-    skills: ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform", "Vercel", "Linux"],
+    skills: ["Docker", "AWS", "CI/CD", "Jenkins", "Terraform", "Cloudways"],
   },
   {
     title: "Tools & Others",
-    skills: ["Git", "Jira", "Figma", "Agile", "System Design", "Testing", "Security"],
+    skills: [
+      "Git",
+      "Bitbucket",
+      "Testing",
+      "Spark (Entry Level)",
+      "Linux",
+      "Bash",
+      "Jira",
+      "Confluence",
+      "VS Code",
+      "Jupyter",
+      "Pandas",
+      "NumPy",
+      "Pytest",
+    ],
   },
 ];
 
@@ -57,7 +67,7 @@ export default function Skills() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20 justify-center max-w-3xl mx-auto">
           {skillCategories.map((category, idx) => (
             <motion.div
               key={category.title}
@@ -81,7 +91,7 @@ export default function Skills() {
 
         <div className="max-w-4xl mx-auto">
           <h3 className="text-2xl font-bold mb-8 text-center">Certifications</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center md:max-w-2xl mx-auto">
             {certifications.map((cert, idx) => (
               <motion.a
                 key={cert.name}

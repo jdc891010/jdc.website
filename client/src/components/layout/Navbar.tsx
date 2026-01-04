@@ -96,7 +96,7 @@ export default function Navbar() {
               <div className="flex gap-4 mt-4 pt-4 border-t border-white/10">
                 <a href="https://github.com/jdc891010" className="text-muted-foreground hover:text-primary"><Github /></a>
                 <a href="https://www.linkedin.com/in/jd-conradie/" className="text-muted-foreground hover:text-primary"><Linkedin /></a>
-                <a href="mailto:jdconradie@gmail.com" className="text-muted-foreground hover:text-primary"><Mail /></a>
+                <a href="mailto:jdconradie8910@gmail.com" className="text-muted-foreground hover:text-primary"><Mail /></a>
               </div>
             </div>
           </motion.div>

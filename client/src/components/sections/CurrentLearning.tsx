@@ -64,8 +64,8 @@ export default function CurrentLearning() {
                </div>
                
                <div className="mb-8">
-                 <h4 className="text-xl font-bold mb-2">AWS Solutions Architect - Associate</h4>
-                 <p className="text-muted-foreground mb-4">Target Date: Q3 2025</p>
+                <h4 className="text-xl font-bold mb-2">AWS Solutions Architect - Associate</h4>
+                <p className="text-muted-foreground mb-4">Target Date: Q1 2026</p>
                  <div className="flex items-center justify-between text-sm mb-2">
                    <span>Study Progress</span>
                    <span className="font-mono text-orange-500">45%</span>
