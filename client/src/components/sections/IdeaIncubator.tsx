@@ -159,7 +159,7 @@ export default function IdeaIncubator() {
               if (contactEl) {
                 contactEl.scrollIntoView({ behavior: "smooth" });
               } else {
-                window.location.href = "mailto:jdconradie8910@gmail.com";
+                window.open("mailto:jdconradie8910@gmail.com", "_self");
               }
             }}
           >

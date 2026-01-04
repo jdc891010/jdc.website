@@ -38,10 +38,6 @@ export default function FeaturedWork() {
     });
   };
 
-  const handleEmail = (projectTitle: string) => {
-    window.location.href = `mailto:?subject=Check out this project: ${projectTitle}&body=I thought you might be interested in this project: ${projectTitle}`;
-  };
-
   return (
     <section id="projects" className="py-24">
       <div className="container mx-auto px-6">
@@ -62,9 +58,9 @@ export default function FeaturedWork() {
              viewport={{ once: true }}
              className="hidden md:block"
           >
-            <Button variant="ghost" className="gap-2 text-primary hover:text-primary/80">
+            {/* <Button variant="ghost" className="gap-2 text-primary hover:text-primary/80">
               View All Projects <ArrowRight size={16} />
-            </Button>
+            </Button> */}
           </motion.div>
         </div>
 
@@ -83,6 +79,12 @@ export default function FeaturedWork() {
                      <img
                        src="/dataagent_logo.png"
                        alt="DataAgent"
+                       className="absolute inset-0 w-full h-full object-cover opacity-80"
+                     />
+                   ) : project.title === "Wranglerlab" ? (
+                     <img
+                       src="/wranglerlab_image.jpg"
+                       alt="Wranglerlab"
                        className="absolute inset-0 w-full h-full object-cover opacity-80"
                      />
                    ) : (
@@ -115,8 +117,10 @@ export default function FeaturedWork() {
                       <DropdownMenuItem onClick={() => handleShare(project.title)} className="cursor-pointer">
                         <Share2 className="mr-2 h-4 w-4" /> Copy Link
                       </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => handleEmail(project.title)} className="cursor-pointer">
-                        <Mail className="mr-2 h-4 w-4" /> Email to Friend
+                      <DropdownMenuItem asChild className="cursor-pointer">
+                        <a href={`mailto:?subject=Check out this project: ${project.title}&body=I thought you might be interested in this project: ${project.title}`}>
+                          <Mail className="mr-2 h-4 w-4" /> Email to Friend
+                        </a>
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
@@ -133,11 +137,11 @@ export default function FeaturedWork() {
                     ))}
                   </div>
                 </CardContent>
-                <CardFooter className="pt-0">
+                {/* <CardFooter className="pt-0">
                   <Button variant="link" className="p-0 h-auto text-sm text-primary gap-1 group-hover:gap-2 transition-all">
                     View Code on GitHub <ArrowRight size={14} />
                   </Button>
-                </CardFooter>
+                </CardFooter> */}
               </Card>
             </motion.div>
           ))}

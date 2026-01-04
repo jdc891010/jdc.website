@@ -17,9 +17,9 @@ export default function Footer() {
             <Button 
               size="lg" 
               className="rounded-full bg-white text-black hover:bg-white/90 font-bold"
-              onClick={() => window.location.href = "mailto:jdconradie8910@gmail.com"}
+              asChild
             >
-              Hire Me Now
+              <a href="mailto:jdconradie8910@gmail.com">Hire Me Now</a>
             </Button>
             <Button 
               size="lg" 
