@@ -28,6 +28,27 @@ app.use(express.json({
 }));
 app.use(express.urlencoded({ extended: false }));
 
+const blockedBots = [
+  "AhrefsBot",
+  "MJ12bot",
+  "SemrushBot",
+  "DotBot",
+  "BLEXBot",
+  "SEOkicks-Robot",
+  "GPTBot",
+  "CCBot",
+];
+app.use((req, res, next) => {
+  const ua = req.headers["user-agent"] || "";
+  for (const bot of blockedBots) {
+    if (typeof ua === "string" && ua.includes(bot)) {
+      res.status(403).end();
+      return;
+    }
+  }
+  next();
+});
+
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;

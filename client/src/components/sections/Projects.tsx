@@ -79,10 +79,17 @@ export default function FeaturedWork() {
             >
               <Card className="h-full bg-black/40 border-white/10 backdrop-blur-sm hover:border-primary/50 transition-colors group flex flex-col relative overflow-hidden">
                 <div className="h-64 bg-gradient-to-br from-gray-900 to-black w-full relative overflow-hidden border-b border-white/5">
-                   {/* Placeholder for project image */}
-                   <div className="absolute inset-0 flex items-center justify-center text-white/5 group-hover:text-primary/10 transition-colors duration-500">
-                      <Layers size={120} />
-                   </div>
+                   {project.title === "DataAgent" ? (
+                     <img
+                       src="/dataagent_logo.png"
+                       alt="DataAgent"
+                       className="absolute inset-0 w-full h-full object-cover opacity-80"
+                     />
+                   ) : (
+                     <div className="absolute inset-0 flex items-center justify-center text-white/5 group-hover:text-primary/10 transition-colors duration-500">
+                        <Layers size={120} />
+                     </div>
+                   )}
                    
                    <div className="absolute top-6 left-6">
                       <div className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/10 font-bold text-xl text-white">
