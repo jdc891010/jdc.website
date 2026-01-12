@@ -22,7 +22,14 @@ const projects = [
   {
     title: "Wranglerlab",
     description: "A visual workspace for messy data. Drag-and-drop interface for complex data wrangling tasks without writing code.",
-    tags: ["ReactFlow", "TypeScript", "WASM", "Rust"],
+    tags: ["Data Engineering", "Research and Development", "Data Processing", "AWS", "Data Lakes"],
+    links: { demo: "#", github: "#" },
+    featured: true,
+  },
+  {
+    title: "AiAffinity",
+    description: "A tool that allows small to medium sized business become part of the ai agent and ai search revolution, improving ai seo and optimizing interactions.",
+    tags: ["AI", "SEO", "Business"],
     links: { demo: "#", github: "#" },
     featured: true,
   }
@@ -49,7 +56,7 @@ export default function FeaturedWork() {
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-4">Featured <span className="text-gradient">Work</span></h2>
             <p className="text-muted-foreground max-w-lg">
-              A selection of projects that demonstrate my passion for building complex, user-centric applications.
+              A selection of projects demonstrating my product-first mindset and solution-based approach. I focus on architecting and delivering comprehensive solutions to complex problems.
             </p>
           </motion.div>
           <motion.div
@@ -64,7 +71,7 @@ export default function FeaturedWork() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projects.map((project, idx) => (
             <motion.div
               key={project.title}
@@ -87,6 +94,12 @@ export default function FeaturedWork() {
                        alt="Wranglerlab"
                        className="absolute inset-0 w-full h-full object-cover opacity-80"
                      />
+                   ) : project.title === "AiAffinity" ? (
+                     <img
+                       src="/aiaffinity_logo.png"
+                       alt="AiAffinity"
+                       className="absolute inset-0 w-full h-full object-cover opacity-80"
+                     />
                    ) : (
                      <div className="absolute inset-0 flex items-center justify-center text-white/5 group-hover:text-primary/10 transition-colors duration-500">
                         <Layers size={120} />
@@ -106,8 +119,13 @@ export default function FeaturedWork() {
                    </div>
                 </div>
                 <CardHeader className="flex flex-row items-center justify-between pb-2">
-                  <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">{project.title}</h3>
-                   <DropdownMenu>
+                  <div className="flex flex-col">
+                      <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">{project.title}</h3>
+                      {(project.title === "Wranglerlab" || project.title === "AiAffinity") && (
+                        <span className="text-xs text-primary/80 font-medium">(launching soon)</span>
+                      )}
+                    </div>
+                   {/* <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-primary">
                         <Share2 size={16} />
@@ -123,7 +141,7 @@ export default function FeaturedWork() {
                         </a>
                       </DropdownMenuItem>
                     </DropdownMenuContent>
-                  </DropdownMenu>
+                  </DropdownMenu> */}
                 </CardHeader>
                 <CardContent className="flex-grow">
                   <p className="text-muted-foreground mb-6 text-lg">

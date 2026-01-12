@@ -27,6 +27,22 @@ const incubatorProjects = [
     links: { demo: "#", github: "#" },
     status: "Prototype Ready",
     color: "bg-orange-500/10 text-orange-500 border-orange-500/20"
+  },
+  {
+    title: "IVF Clinic Dashboard",
+    description: "A centralized dashboard for IVF clinics to manage patient cycles, appointments, and treatment protocols efficiently.",
+    tags: ["Flutter", "Healthcare", "Dashboard", "Analytics"],
+    links: { demo: "#", github: "#" },
+    status: "Prototype Ready",
+    color: "bg-blue-500/10 text-blue-500 border-blue-500/20"
+  },
+  {
+    title: "IVF Patient App",
+    description: "A companion app for IVF patients to track medications, appointments, and cycle progress, improving adherence and communication.",
+    tags: ["Flutter", "Mobile", "Healthcare", "Patient Care"],
+    links: { demo: "#", github: "#" },
+    status: "Concept",
+    color: "bg-purple-500/10 text-purple-500 border-purple-500/20"
   }
 ];
 
